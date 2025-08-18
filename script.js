@@ -17,4 +17,6 @@
 
   alert("Form submitted successfully!");
   return true;
-}
+}changes are made in script.js
+
+
