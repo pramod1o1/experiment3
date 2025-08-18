@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>WEB REGISTRATION FORM </title>
+        <link rel="stylesheet" type="text/css" media="screen" href ="style.css">
+        </head>
+        <body>
+            <form id="Registration Form" on Submit="return validatefrom()">
+                <h2>Web registration form</h2>
+                <label> First name:</label>
+                <input type="text" name="first name" required>
+                <label> last name:</label>
+                <input type="text" name="last name" required>
+                <label> Fathers name:</label>
+                <input type="text" name="Fathers name" required>
+                <label>Mothers name:</label>
+                <input type="text" name="Mothers name" rquired>
+                <label>date of birth</label>
+                <input type="date" name="date of birth" required>
+                <label> Gender:</label>
+                <select name="gender" required>
+                    <option value=""> select gender</option>
+                    <option> Male</option>
+                        <option>Female</option></select>
+                        <label> Address:</label>
+                        <textarea name="address" rows="3" required></textarea>
+                        <label> upload Photo:</label>
+                        <input type="file" name="photo" accept="image/*" required>
+                        <label>email id:</label>
+                        <input type="email" name="email" required>
+                        <label> Phone Number:</label>
+                        <input type="tel" name="phone number" pattern="[0-9] {10}" required>
+                        <div class="btn-group">
+                            <button type="submit" class="submit-btn"> submit </button>
+                            <button type="reset" class="reset"> Reset</button>
+                        
+
+
+                        </div>
+
+                
+            </form>
+            <script src="script.js"></script>
+        </body>
+</html>
