@@ -1,44 +1,91 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>WEB REGISTRATION FORM </title>
-        <link rel="stylesheet" type="text/css" media="screen" href ="style.css">
-        </head>
-        <body>
-            <form id="Registration Form" on Submit="return validatefrom()">
-                <h2>Web registration form</h2>
-                <label> First name:</label>
-                <input type="text" name="first name" required>
-                <label> last name:</label>
-                <input type="text" name="last name" required>
-                <label> Fathers name:</label>
-                <input type="text" name="Fathers name" required>
-                <label>Mothers name:</label>
-                <input type="text" name="Mothers name" rquired>
-                <label>date of birth</label>
-                <input type="date" name="date of birth" required>
-                <label> Gender:</label>
-                <select name="gender" required>
-                    <option value=""> select gender</option>
-                    <option> Male</option>
-                        <option>Female</option></select>
-                        <label> Address:</label>
-                        <textarea name="address" rows="1" required></textarea>
-                        <label> upload Photo:</label>
-                        <input type="file" name="photo" accept="image/*" required>
-                        <label>email id:</label>
-                        <input type="email" name="email" required>
-                        <label> Phone Number:</label>
-                        <input type="tel" name="phone number" pattern="[0-9] {10}" >
-                        <div class="btn-group">
-                            <button type="submit" class="submit-btn"> submit </button>
-                            <button type="reset" class="reset"> Reset</button>
-                        
+<head>
+    <title>WEB REGISTRATION FORM</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function validateForm() {
+            let form = document.forms["registrationForm"];
 
+            let firstName = form["firstName"].value.trim();
+            let lastName = form["lastName"].value.trim();
+            let fathersName = form["fathersName"].value.trim();
+            let mothersName = form["mothersName"].value.trim();
+            let dob = form["dob"].value;
+            let gender = form["gender"].value;
+            let address = form["address"].value.trim();
+            let email = form["email"].value.trim();
+            let phone = form["phone"].value.trim();
 
-                        </div>
+            // Simple Validations
+            if (firstName === "" || lastName === "" || fathersName === "" || mothersName === "" ||
+                dob === "" || gender === "" || address === "" || email === "" || phone === "") {
+                alert("⚠️ Please fill in all fields.");
+                return false;
+            }
 
-                
-            </form>
-            <script src="script.js"></script>
-        </body>
+            // Phone number validation (10 digits)
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert("⚠️ Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            // Email validation (basic check)
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailPattern.test(email)) {
+                alert("⚠️ Please enter a valid email address.");
+                return false;
+            }
+
+            // ✅ If all checks pass
+            alert("✅ Registration Successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="registrationForm" onsubmit="return validateForm()">
+        <h2>Web Registration Form</h2>
+
+        <label>First name:</label>
+        <input type="text" name="firstName" required><br><br>
+
+        <label>Last name:</label>
+        <input type="text" name="lastName" required><br><br>
+
+        <label>Father's name:</label>
+        <input type="text" name="fathersName" required><br><br>
+
+        <label>Mother's name:</label>
+        <input type="text" name="mothersName" required><br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required><br><br>
+
+        <label>Gender:</label>
+        <select name="gender" required>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select><br><br>
+
+        <label>Address:</label>
+        <textarea name="address" rows="2" required></textarea><br><br>
+
+        <label>Upload Photo:</label>
+        <input type="file" name="photo" accept="image/*" required><br><br>
+
+        <label>Email ID:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}" required><br><br>
+
+        <div class="btn-group">
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        </div>
+    </form>
+</body>
 </html>
