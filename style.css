@@ -1,54 +1,80 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  padding: 20px;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding-top: 20px;
 }
 
-form {
+.form-container {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px 30px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 h2 {
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-weight: 600;
 }
 
-input, textarea, select {
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select,
+textarea {
   width: 100%;
-  padding: 8px;
+  padding: 6px 8px;
   margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
-button {
-  margin-top: 15px;
-  padding: 10px;
-  width: 48%;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
+textarea {
+  resize: vertical;
+  height: 60px;
 }
 
-.submit-btn {
-  background-color: #4CAF50;
+input[type="file"] {
+  margin-top: 5px;
 }
 
-.reset-btn {
-  background-color: #f44336;
-}
-
-.btn-group {
+.buttons {
   display: flex;
   justify-content: space-between;
+  margin-top: 25px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  width: 48%;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="reset"] {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  width: 48%;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
 }
