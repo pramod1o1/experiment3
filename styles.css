@@ -1,80 +1,77 @@
+/* General Page Styling */
 body {
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
+  background: #f4f7f9;
   margin: 0;
-  padding-top: 20px;
+  padding: 0;
 }
 
-.form-container {
-  background: white;
+/* Form Container */
+form {
+  max-width: 500px;
+  margin: 30px auto;
   padding: 20px 30px;
-  width: 400px;
+  background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Headings */
 h2 {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-top: 20px;
+  color: #333;
 }
 
+/* Labels and Inputs */
 label {
   display: block;
-  margin-top: 15px;
-  font-weight: 600;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #555;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="email"],
-select,
-textarea {
+input, textarea, select {
   width: 100%;
-  padding: 6px 8px;
+  padding: 8px 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 14px;
   box-sizing: border-box;
 }
 
 textarea {
   resize: vertical;
-  height: 60px;
+  min-height: 70px;
 }
 
-input[type="file"] {
-  margin-top: 5px;
-}
-
+/* Buttons */
 .buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 25px;
+  text-align: center;
+  margin-top: 20px;
 }
 
-input[type="submit"] {
-  background-color: #4CAF50;
-  border: none;
+button {
+  background: #4CAF50;
   color: white;
-  padding: 10px 0;
-  width: 48%;
-  border-radius: 4px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  margin: 5px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background 0.3s;
 }
 
-input[type="reset"] {
-  background-color: #f44336;
-  border: none;
-  color: white;
-  padding: 10px 0;
-  width: 48%;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
+button:hover {
+  background: #45a049;
+}
+
+button[type="reset"] {
+  background: #f44336;
+}
+
+button[type="reset"]:hover {
+  background: #d32f2f;
 }
