@@ -1,63 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Web Registration Form</title>
-    <link rel="stylesheet" href="styles.css" /> <!-- Link to your CSS file -->
+  <meta charset="UTF-8">
+  <title>User Registration</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="form-container">
-    <h2>Web Registration Form</h2>
-    <form>
-      <label>First Name:
-        <input type="text" name="firstName" />
-      </label>
-      <label>Last Name:
-        <input type="text" name="lastName" />
-      </label>
-      <label>Enter Father's Name:
-        <input type="text" name="fatherName" />
-      </label>
-      <label>Mother's Name:
-        <input type="text" name="motherName" />
-      </label>
-      <label>Date of Birth:
-        <input type="date" name="dob" />
-      </label>
-      <label>Gender:
-        <select name="gender">
-          <option value="" disabled selected>Select Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-      </label>
-      <label>Address:
-        <textarea name="address"></textarea>
-      </label>
-      <label>Qualification:
-        <input type="text" name="qualification" />
-      </label>
-      <label>Education Details:
-        <textarea name="educationDetails"></textarea>
-      </label>
-      <label>Upload Photo:
-        <input type="file" name="photo" />
-      </label>
-      <label>Upload Signature:
-        <input type="file" name="signature" />
-      </label>
-      <label>Email ID:
-        <input type="email" name="email" />
-      </label>
-      <label>Phone Number:
-        <input type="text" name="phone" />
-      </label>
-      <div class="buttons">
-        <input type="submit" value="Submit" />
-        <input type="reset" value="Reset" />
-      </div>
-    </form>
-  </div>
+  <h2 style="text-align:center;">User Registration</h2>
+  <form id="registrationForm">
+    <label>First Name: <input type="text" id="firstName" required></label>
+    <label>Last Name: <input type="text" id="lastName" required></label>
+    <label>Father's Name: <input type="text" id="fatherName" required></label>
+    <label>Mother's Name: <input type="text" id="motherName" required></label>
+    <label>Date of Birth: <input type="date" id="dob" required></label>
+    <label>Address: <textarea id="address" required></textarea></label>
+    <label>Education Details: <input type="text" id="education" required></label>
+    <label>Phone Number: <input type="tel" id="phone" required></label>
+    <label>Email: <input type="email" id="email" required></label>
+    <label>Confirm Email: <input type="email" id="emailConfirm" required></label>
+    <label>Password: <input type="password" id="password" required></label>
+    <label>Gender:
+      <select id="gender" required>
+        <option value="">--Select--</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <div class="buttons">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+  <script src="script.js"></script>
 </body>
 </html>
